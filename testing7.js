@@ -9,11 +9,11 @@
 
 //console.log(jsCreator[-1]);
 
-let word = "JavaScript";
+// let word = "JavaScript";
 // console.log(word.toUpperCase().slice(4));
 
 // console.log(word.slice(4).toUpperCase());
-//console.log(word.replace("J","Q").slice(0,5));
+// console.log(word.replace("J","Q").slice(0,5));
 // console.log(word.slice(1,6));
 
 // let org = "  The Launch code Foundation ";
@@ -45,13 +45,13 @@ let word = "JavaScript";
 
 // lengthNumber = onlyDigits.length;
 
-// console.log(lengthNumber);
+//  console.log(lengthNumber);
 
 //7-9-2 Ex 1
-//let dna = " TCG-TAC-gaC-TAC-CGT-CAG-ACT-TAa-CcA-GTC-cat-AGA-GCT    "
-//let dna = "taco cat"
-//let upperDna = dna.trim().toUpperCase();
-//console.log(upperDna);
+let dna = " TCG-TAC-gaC-TAC-CGT-CAG-ACT-TAa-CcA-GTC-cat-AGA-GCT    "
+let dna = "taco cat"
+let upperDna = dna.trim().toUpperCase();
+console.log(upperDna);
 
 //7-9-2 Ex 2
 // let noGCT;
