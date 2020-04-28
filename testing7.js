@@ -1,3 +1,4 @@
+
 // let jsCreator = "Brendan Eich";
 // let firstInitial = jsCreator[0];
 // let lastInitial =jsCreator[8];
