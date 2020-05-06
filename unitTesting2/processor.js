@@ -1,12 +1,17 @@
-function isSpanish(word){
-    if (word.includes("::")) {
-        return {};
-    }else{
-        return -1;
+function process(transmission) {
+    if (transmission.indexOf("::") < 0) {
+       // Data is invalid
+       return -1;
     }
-    
-        
+    let parts = transmission.split("::");
+    let rawData = parts[1];
+    if (rawData[0] !== "<") {
+       rawData = -1;
     }
-
-
-module.exports = isSpanish;
+    return {
+       id: Number(parts[0]),
+       rawData: rawData
+    };
+ }
+ 
+ module.exports = process;

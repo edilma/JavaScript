@@ -13,9 +13,24 @@ describe("words processor", function(){
         assert.strictEqual(result,-1);
     });
 
-    it ("Should return id in object", function(){
+    it("returns id in object", function() {
         let result = processor("9701::<489584872710>");
-        assert.strictEqual(result.id, undefined);
-    });
+        assert.notStrictEqual(result.id, undefined);
+      });
+
+    it("converts id to a number", function() {
+        let result = processor("9701::<489584872710>");
+        assert.strictEqual(result.id, 9701);
+     });
+
+     it ("Should return rawData in object", function(){
+         let result = processor("9701::<489584872710>");
+         assert.strictEqual(result.rawData, undefined);
+     });
+
+     it("returns -1 for rawData if missing < at position 0", function() {
+        let result = processor("9701::487297403495720912>");
+        assert.strictEqual(result.rawData, -1);
+     });
 
 });
