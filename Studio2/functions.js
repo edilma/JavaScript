@@ -89,4 +89,6 @@ console.log(buildCrew(select,animals));
   
 
   //console.log (candidateE.astronautID );
+
+  function oxygenExpended 
  
