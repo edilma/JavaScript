@@ -72,4 +72,19 @@ let candidateF = {
 
 let animals = [candidateA,candidateB,candidateC,candidateD,candidateE,candidateF];
 
+function buildCrew ( select, animals){
+  let crew = [];
+  for (let index = 0; index < select.length; index++) {
+    for (let j = 0; j < animals.length; j++) {
+      if (select[index]==(animals[j].astronautID)) {
+        crew.push(animals[j])
+      }
+      
+    }// looping through the animal object       
+  }// looping through the select array 
+  return crew;
+}
+
 // Code your template literal and console.log statements:
+let crew = buildCrew ( select, animals)
+console.log(crew);

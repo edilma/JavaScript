@@ -1,3 +1,4 @@
+
 function selectRandomEntry(idNumbers ){
     let selectedEntry; 
     selectedEntry = idNumbers[(Math.floor(Math.random()*idNumbers.length))];
@@ -64,26 +65,28 @@ let candidateA = {
     'astronautID':890
   };
   let animals = [candidateA,candidateB,candidateC,candidateD,candidateE,candidateF];
+  
   let select = animalSelected(idNumbers);
 
-  function buildCrew( select ,animals){
-    const crew = [];  
-
-    for (const astronautID in animals){
-        console.log (astronautID);
-        for (let index = 0; index < 3; index++) {
-            console.log(select[index])
-            if (animals.astronautID == select[index]) {
-               
-                crew.includes(item);
-            };
-            
-        }     
-      }
+  function buildCrew ( select, animals){
+    let crew = [];
+    for (let index = 0; index < select.length; index++) {
+      for (let j = 0; j < animals.length; j++) {
+        if (select[index]==(animals[j].astronautID)) {
+          crew.push(animals[j])
+        }
+        
+      }// looping through the animal object       
+    }// looping through the select array 
     return crew;
   }
+   
+    
+  
+console.log (select);
+console.log(buildCrew(select,animals));
 
-  console.log(buildCrew(select,animals));
+  
 
   //console.log (candidateE.astronautID );
  
